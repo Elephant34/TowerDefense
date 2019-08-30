@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scenes/mapAssets/GameMap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/ememies/standered/Standered.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/towers/cannon/Cannon.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scenes/HUD/HUD.tscn" type="PackedScene" id=4]
 
 [sub_resource type="Curve2D" id=1]
 _data = {
@@ -24,5 +23,3 @@ rotation = -0.00257335
 
 [node name="Cannon" parent="." instance=ExtResource( 3 )]
 position = Vector2( 418.824, 155.841 )
-
-[node name="HUD" parent="." instance=ExtResource( 4 )]
