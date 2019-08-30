@@ -22,7 +22,7 @@ script = ExtResource( 1 )
 margin_left = 30.0
 margin_top = 40.0
 margin_right = 994.0
-margin_bottom = 570.0
+margin_bottom = 610.0
 custom_constants/separation = 60
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
@@ -35,36 +35,47 @@ margin_right = 743.0
 margin_bottom = 150.0
 texture = ExtResource( 2 )
 
-[node name="CenterContainer2" type="CenterContainer" parent="VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
 margin_top = 210.0
 margin_right = 964.0
-margin_bottom = 494.0
+margin_bottom = 474.0
+custom_constants/separation = 30
+alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/CenterContainer2"]
-margin_left = 400.0
-margin_right = 564.0
-margin_bottom = 284.0
-custom_constants/separation = 40
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/VBoxContainer"]
+margin_right = 964.0
+margin_bottom = 68.0
 
-[node name="Play" type="TextureButton" parent="VBoxContainer/CenterContainer2/VBoxContainer"]
-margin_right = 164.0
+[node name="Play" type="TextureButton" parent="VBoxContainer/VBoxContainer/CenterContainer"]
+margin_left = 387.0
+margin_right = 577.0
 margin_bottom = 68.0
 texture_normal = ExtResource( 3 )
 texture_pressed = ExtResource( 4 )
 
-[node name="Credits" type="TextureButton" parent="VBoxContainer/CenterContainer2/VBoxContainer"]
-margin_top = 108.0
-margin_right = 164.0
-margin_bottom = 176.0
+[node name="CenterContainer2" type="CenterContainer" parent="VBoxContainer/VBoxContainer"]
+margin_top = 98.0
+margin_right = 964.0
+margin_bottom = 166.0
+
+[node name="Credits" type="TextureButton" parent="VBoxContainer/VBoxContainer/CenterContainer2"]
+margin_left = 321.0
+margin_right = 643.0
+margin_bottom = 68.0
 texture_normal = ExtResource( 5 )
 texture_pressed = ExtResource( 6 )
 
-[node name="Quit" type="TextureButton" parent="VBoxContainer/CenterContainer2/VBoxContainer"]
-margin_top = 216.0
-margin_right = 164.0
-margin_bottom = 284.0
+[node name="CenterContainer3" type="CenterContainer" parent="VBoxContainer/VBoxContainer"]
+margin_top = 196.0
+margin_right = 964.0
+margin_bottom = 264.0
+
+[node name="Quit" type="TextureButton" parent="VBoxContainer/VBoxContainer/CenterContainer3"]
+margin_left = 381.0
+margin_right = 582.0
+margin_bottom = 68.0
 texture_normal = ExtResource( 7 )
 texture_pressed = ExtResource( 8 )
-[connection signal="pressed" from="VBoxContainer/CenterContainer2/VBoxContainer/Play" to="." method="_on_Play_pressed"]
-[connection signal="pressed" from="VBoxContainer/CenterContainer2/VBoxContainer/Credits" to="." method="_on_Credits_pressed"]
-[connection signal="pressed" from="VBoxContainer/CenterContainer2/VBoxContainer/Quit" to="." method="_on_Quit_pressed"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/CenterContainer/Play" to="." method="_on_Play_pressed"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/CenterContainer2/Credits" to="." method="_on_Credits_pressed"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/CenterContainer3/Quit" to="." method="_on_Quit_pressed"]

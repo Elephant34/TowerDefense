@@ -19,6 +19,16 @@ config/name="TowerDefense"
 run/main_scene="res://scenes/mainMenu/MainMenu.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/height=640
+
+[layer_names]
+
+2d_physics/layer_1="towers"
+2d_physics/layer_2="enemies"
+2d_physics/layer_3="bullet"
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"

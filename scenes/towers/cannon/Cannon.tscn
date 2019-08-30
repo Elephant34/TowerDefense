@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/towers/cannon/Cannon.gd" type="Script" id=1]
+[ext_resource path="res://art/Towers/Cannon/Lvl0.png" type="Texture" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 16.6566
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 87.5654
+
+[node name="Cannon" type="Area2D"]
+collision_mask = 2
+script = ExtResource( 1 )
+bullet_cooldown = 0.7
+
+[node name="Sprite" type="Sprite" parent="."]
+rotation = 1.5708
+texture = ExtResource( 2 )
+
+[node name="Clickable" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="range" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="range"]
+shape = SubResource( 2 )
+
+[node name="BulletCooldown" type="Timer" parent="."]
+wait_time = 0.7
+autostart = true
+[connection signal="area_entered" from="range" to="." method="_on_range_area_entered"]
+[connection signal="area_exited" from="range" to="." method="_on_range_area_exited"]
+[connection signal="timeout" from="BulletCooldown" to="." method="_on_BulletCooldown_timeout"]
