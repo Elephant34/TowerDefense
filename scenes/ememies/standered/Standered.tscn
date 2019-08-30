@@ -7,10 +7,13 @@
 radius = 8.56425
 height = 26.0307
 
-[node name="Standered" type="PathFollow2D"]
+[node name="Standered" type="PathFollow2D" groups=[
+"enemy",
+]]
 rotation = -0.00254996
 loop = false
 script = ExtResource( 1 )
+speed = 1.4
 
 [node name="Sprite" type="Sprite" parent="."]
 rotation = 1.5708
@@ -23,3 +26,4 @@ collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource( 1 )
+[connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]

@@ -6,14 +6,16 @@
 [sub_resource type="CircleShape2D" id=1]
 radius = 29.5164
 
-[node name="Bullet" type="Area2D"]
+[node name="Bullet" type="Area2D" groups=[
+"bullet",
+]]
 collision_layer = 4
 collision_mask = 2
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
-speed = 2
+speed = 3
 
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 1.5, 1.5 )
