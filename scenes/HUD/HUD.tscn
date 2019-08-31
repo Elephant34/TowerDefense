@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://art/fonts/hud.tres" type="DynamicFont" id=1]
+[ext_resource path="res://art/HUD/NewWave.png" type="Texture" id=2]
+[ext_resource path="res://art/HUD/NewWaveClicked.png" type="Texture" id=3]
 
 [node name="HUD" type="Control"]
 anchor_right = 1.0
@@ -15,46 +17,53 @@ custom_constants/margin_left = 30
 [node name="VBoxContainer" type="VBoxContainer" parent="Resources"]
 margin_left = 30.0
 margin_top = 20.0
-margin_right = 150.0
-margin_bottom = 75.0
+margin_right = 230.0
+margin_bottom = 110.0
 custom_constants/separation = 15
 
-[node name="Coins" type="Label" parent="Resources/VBoxContainer"]
-margin_right = 120.0
+[node name="Civilians" type="Label" parent="Resources/VBoxContainer"]
+margin_right = 200.0
 margin_bottom = 20.0
+custom_fonts/font = ExtResource( 1 )
+text = "Civilians:"
+
+[node name="Coins" type="Label" parent="Resources/VBoxContainer"]
+margin_top = 35.0
+margin_right = 200.0
+margin_bottom = 55.0
 custom_fonts/font = ExtResource( 1 )
 text = "Coins:"
 
 [node name="Mana" type="Label" parent="Resources/VBoxContainer"]
-margin_top = 35.0
-margin_right = 120.0
-margin_bottom = 55.0
+margin_top = 70.0
+margin_right = 200.0
+margin_bottom = 90.0
 custom_fonts/font = ExtResource( 1 )
 text = "Mana:"
 
 [node name="Level" type="MarginContainer" parent="."]
 anchor_left = 1.0
 anchor_right = 1.0
-margin_left = -230.0
-margin_bottom = 40.0
-custom_constants/margin_right = 30
+margin_left = -247.0
+margin_bottom = 94.0
+custom_constants/margin_right = 20
 custom_constants/margin_top = 20
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Level"]
 margin_top = 20.0
-margin_right = 200.0
-margin_bottom = 75.0
+margin_right = 227.0
+margin_bottom = 94.0
 custom_constants/separation = 15
 
-[node name="Civilians" type="Label" parent="Level/VBoxContainer"]
-margin_right = 200.0
+[node name="Wave" type="Label" parent="Level/VBoxContainer"]
+margin_right = 227.0
 margin_bottom = 20.0
 custom_fonts/font = ExtResource( 1 )
-text = "Civilians:"
-
-[node name="Wave" type="Label" parent="Level/VBoxContainer"]
-margin_top = 35.0
-margin_right = 200.0
-margin_bottom = 55.0
-custom_fonts/font = ExtResource( 1 )
 text = "Wave:"
+
+[node name="TextureButton" type="TextureButton" parent="Level/VBoxContainer"]
+margin_top = 35.0
+margin_right = 227.0
+margin_bottom = 74.0
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 3 )

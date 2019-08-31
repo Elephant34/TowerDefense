@@ -1,6 +1,6 @@
 extends Area2D
 
-export var speed = 1
+export var speed = 3
 export var damage = 1
 
 var my_target

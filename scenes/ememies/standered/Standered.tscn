@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scenes/ememies/standered/Standered.gd" type="Script" id=1]
 [ext_resource path="res://art/enemies/Standard.png" type="Texture" id=2]
+[ext_resource path="res://scenes/ememies/LifeBar.tscn" type="PackedScene" id=3]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 8.56425
@@ -13,7 +14,6 @@ height = 26.0307
 rotation = -0.00254996
 loop = false
 script = ExtResource( 1 )
-speed = 1.4
 
 [node name="Sprite" type="Sprite" parent="."]
 rotation = 1.5708
@@ -26,4 +26,11 @@ collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource( 1 )
+
+[node name="Lifebar" parent="." instance=ExtResource( 3 )]
+margin_left = -12.9005
+margin_top = -18.4794
+margin_right = 167.099
+margin_bottom = 41.5206
+rect_scale = Vector2( 0.15, 0.13 )
 [connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]

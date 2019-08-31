@@ -14,7 +14,7 @@ func _ready():
 
 func _on_range_area_entered(area):
 	# Tests if they are an enemy
-	if area.is_in_group("enemy"):
+	if area.get_parent().is_in_group("enemy"):
 		# If no target has been selected asign this one
 		if not target:
 			target = area
