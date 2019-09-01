@@ -27,12 +27,23 @@ tile_data = PoolIntArray( 0, 0, 1, 1, 0, 1, 2, 0, 1, 3, 0, 1, 4, 0, 1, 5, 0, 1, 
 curve = SubResource( 1 )
 
 [node name="Standered" parent="Enemies" instance=ExtResource( 4 )]
+position = Vector2( 120.76, 351.654 )
+rotation = -0.00256169
+offset = 121.02
+
+[node name="Standered4" parent="Enemies" instance=ExtResource( 4 )]
 position = Vector2( -0.139915, 351.965 )
 rotation = -0.00257335
 
 [node name="Standered2" parent="Enemies" instance=ExtResource( 4 )]
-position = Vector2( 90.5183, 351.732 )
-offset = 90.77
+position = Vector2( 273.865, 351.26 )
+rotation = -0.00258267
+offset = 274.27
+
+[node name="Standered3" parent="Enemies" instance=ExtResource( 4 )]
+position = Vector2( 181.155, 351.499 )
+rotation = -0.0025759
+offset = 181.54
 
 [node name="Cannon" parent="." instance=ExtResource( 5 )]
-position = Vector2( 420.055, 161.638 )
+position = Vector2( 801.456, 409.754 )

@@ -1,14 +1,19 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://art/fonts/hud.tres" type="DynamicFont" id=1]
-[ext_resource path="res://art/HUD/NewWave.png" type="Texture" id=2]
-[ext_resource path="res://art/HUD/NewWaveClicked.png" type="Texture" id=3]
+[ext_resource path="res://scenes/HUD/HUD.gd" type="Script" id=1]
+[ext_resource path="res://art/fonts/hud.tres" type="DynamicFont" id=2]
+[ext_resource path="res://art/HUD/NewWave.png" type="Texture" id=3]
+[ext_resource path="res://art/HUD/NewWaveClicked.png" type="Texture" id=4]
+[ext_resource path="res://art/HUD/UpArrow.png" type="Texture" id=5]
+[ext_resource path="res://art/HUD/DownArrow.png" type="Texture" id=6]
 
 [node name="HUD" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 1 )
 
 [node name="Resources" type="MarginContainer" parent="."]
+editor/display_folded = true
 margin_right = 150.0
 margin_bottom = 75.0
 custom_constants/margin_top = 20
@@ -24,24 +29,25 @@ custom_constants/separation = 15
 [node name="Civilians" type="Label" parent="Resources/VBoxContainer"]
 margin_right = 200.0
 margin_bottom = 20.0
-custom_fonts/font = ExtResource( 1 )
+custom_fonts/font = ExtResource( 2 )
 text = "Civilians:"
 
 [node name="Coins" type="Label" parent="Resources/VBoxContainer"]
 margin_top = 35.0
 margin_right = 200.0
 margin_bottom = 55.0
-custom_fonts/font = ExtResource( 1 )
+custom_fonts/font = ExtResource( 2 )
 text = "Coins:"
 
 [node name="Mana" type="Label" parent="Resources/VBoxContainer"]
 margin_top = 70.0
 margin_right = 200.0
 margin_bottom = 90.0
-custom_fonts/font = ExtResource( 1 )
+custom_fonts/font = ExtResource( 2 )
 text = "Mana:"
 
 [node name="Level" type="MarginContainer" parent="."]
+editor/display_folded = true
 anchor_left = 1.0
 anchor_right = 1.0
 margin_left = -247.0
@@ -58,12 +64,35 @@ custom_constants/separation = 15
 [node name="Wave" type="Label" parent="Level/VBoxContainer"]
 margin_right = 227.0
 margin_bottom = 20.0
-custom_fonts/font = ExtResource( 1 )
+custom_fonts/font = ExtResource( 2 )
 text = "Wave:"
 
 [node name="TextureButton" type="TextureButton" parent="Level/VBoxContainer"]
 margin_top = 35.0
 margin_right = 227.0
 margin_bottom = 74.0
-texture_normal = ExtResource( 2 )
-texture_pressed = ExtResource( 3 )
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -50.0
+custom_constants/margin_left = 20
+custom_constants/margin_bottom = 10
+
+[node name="UpArrow" type="TextureButton" parent="MarginContainer"]
+margin_left = 20.0
+margin_right = 1024.0
+margin_bottom = 40.0
+texture_normal = ExtResource( 5 )
+
+[node name="DownArrow" type="TextureButton" parent="MarginContainer"]
+visible = false
+margin_left = 20.0
+margin_right = 1024.0
+margin_bottom = 40.0
+texture_normal = ExtResource( 6 )
+[connection signal="pressed" from="MarginContainer/UpArrow" to="." method="_on_UpArrow_pressed"]
+[connection signal="pressed" from="MarginContainer/DownArrow" to="." method="_on_DownArrow_pressed"]

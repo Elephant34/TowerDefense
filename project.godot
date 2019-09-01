@@ -19,6 +19,10 @@ config/name="TowerDefense"
 run/main_scene="res://scenes/mainMenu/MainMenu.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+global="*res://scenes/global.gd"
+
 [display]
 
 window/size/height=640
