@@ -88,34 +88,16 @@ color = Color( 0, 0.976471, 1, 0.333333 )
 margin_right = 1024.0
 margin_bottom = 640.0
 
-[node name="GridContainer" type="GridContainer" parent="TowerSelection/TowerSelection"]
+[node name="Basic" type="GridContainer" parent="TowerSelection/TowerSelection"]
 margin_left = 512.0
 margin_top = 320.0
 margin_right = 512.0
 margin_bottom = 320.0
-columns = 4
 
-[node name="Basic" type="GridContainer" parent="TowerSelection/TowerSelection/GridContainer"]
-margin_right = 32.0
-margin_bottom = 32.0
-columns = 2
-
-[node name="Cannon" type="TextureButton" parent="TowerSelection/TowerSelection/GridContainer/Basic"]
+[node name="Cannon" type="TextureButton" parent="TowerSelection/TowerSelection/Basic"]
 margin_right = 32.0
 margin_bottom = 32.0
 texture_normal = ExtResource( 5 )
-
-[node name="Advanced" type="GridContainer" parent="TowerSelection/TowerSelection/GridContainer"]
-margin_left = 36.0
-margin_right = 36.0
-margin_bottom = 32.0
-columns = 2
-
-[node name="Resource" type="GridContainer" parent="TowerSelection/TowerSelection/GridContainer"]
-margin_left = 40.0
-margin_right = 40.0
-margin_bottom = 32.0
-columns = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchor_left = 1.0
@@ -141,6 +123,6 @@ margin_right = 60.0
 margin_bottom = 40.0
 texture_normal = ExtResource( 7 )
 [connection signal="pressed" from="Level/VBoxContainer/NewWave" to="." method="_on_NewWave_pressed"]
-[connection signal="pressed" from="TowerSelection/TowerSelection/GridContainer/Basic/Cannon" to="." method="_on_Cannon_pressed"]
+[connection signal="pressed" from="TowerSelection/TowerSelection/Basic/Cannon" to="." method="_on_Cannon_pressed"]
 [connection signal="pressed" from="MarginContainer/UpArrow" to="." method="_on_UpArrow_pressed"]
 [connection signal="pressed" from="MarginContainer/DownArrow" to="." method="_on_DownArrow_pressed"]

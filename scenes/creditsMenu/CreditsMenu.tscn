@@ -24,7 +24,7 @@ script = ExtResource( 1 )
 margin_left = 40.0
 margin_top = 40.0
 margin_right = 1024.0
-margin_bottom = 600.0
+margin_bottom = 640.0
 custom_constants/separation = 40
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
@@ -42,7 +42,7 @@ text = "Credits:"
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
 margin_top = 100.0
 margin_right = 984.0
-margin_bottom = 336.0
+margin_bottom = 256.0
 custom_constants/separation = 30
 
 [node name="Coding" type="VBoxContainer" parent="VBoxContainer/VBoxContainer"]
@@ -65,6 +65,7 @@ custom_fonts/font = SubResource( 2 )
 text = "    Ambrose Hlustik-Smith"
 
 [node name="Art" type="VBoxContainer" parent="VBoxContainer/VBoxContainer"]
+visible = false
 margin_top = 80.0
 margin_right = 984.0
 margin_bottom = 130.0
@@ -85,9 +86,9 @@ text = "    Megan Wheeler"
 
 [node name="SpecialThanks" type="VBoxContainer" parent="VBoxContainer/VBoxContainer"]
 editor/display_folded = true
-margin_top = 160.0
+margin_top = 80.0
 margin_right = 984.0
-margin_bottom = 236.0
+margin_bottom = 156.0
 custom_constants/separation = 10
 
 [node name="SpecialThanks" type="Label" parent="VBoxContainer/VBoxContainer/SpecialThanks"]
@@ -111,9 +112,9 @@ custom_fonts/font = SubResource( 2 )
 text = "    Cody \"CodeMan38\" Boisclair for font Press Start 2P"
 
 [node name="CenterContainer2" type="CenterContainer" parent="VBoxContainer"]
-margin_top = 376.0
+margin_top = 296.0
 margin_right = 984.0
-margin_bottom = 455.0
+margin_bottom = 375.0
 
 [node name="Back" type="TextureButton" parent="VBoxContainer/CenterContainer2"]
 margin_left = 397.0
