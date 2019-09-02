@@ -7,10 +7,15 @@ var target
 
 export var bullet_cooldown = 0.7
 
+var spawned
+var colliding = false
+
 var bullet_resource = load("res://scenes/towers/cannon/Bullet.tscn")
 
 func _ready():
 	$BulletCooldown.wait_time = bullet_cooldown
+	
+	spawned = true
 
 func _on_range_area_entered(area):
 	# Tests if they are an enemy
@@ -28,30 +33,46 @@ func _on_range_area_exited(area):
 	in_range.erase(area)
 	
 func _process(delta):
-	# If the target isn't in range forget it
-	if not target in in_range:
-		target = null
 	
-	# If their are enemies in range
-	if in_range:
-		
-		# If no target is assigned put it as the first enemy in the list
-		if not target:
-			target = in_range[0]
-		
-		# Checks every enemy if to see which is furvis along
-		for enemy in in_range:
-			if enemy.get_parent().offset > target.get_parent().offset:
-				target = enemy
+	if spawned:
+		if Input.is_action_just_pressed("click") and not colliding:
+			spawned = false
+			$BulletCooldown.start()
+		else:
+			position = get_viewport().get_mouse_position()
 	else:
-		target = null
-	
-	if target:
-		# Looks at the selected target
-		look_at(target.get_parent().position)
+		# If the target isn't in range forget it
+		if not target in in_range:
+			target = null
+		
+		# If their are enemies in range
+		if in_range:
+			
+			# If no target is assigned put it as the first enemy in the list
+			if not target:
+				target = in_range[0]
+			
+			# Checks every enemy if to see which is furvis along
+			for enemy in in_range:
+				if enemy.get_parent().offset > target.get_parent().offset:
+					target = enemy
+		else:
+			target = null
+		
+		if target:
+			# Looks at the selected target
+			look_at(target.get_parent().position)
 
 func _on_BulletCooldown_timeout():
 	# If the tower has a target spawn a bullet
 	if target:
 		var Bullet = bullet_resource.instance()
 		add_child(Bullet)
+
+
+func _on_Cannon_area_entered(area):
+	colliding = true
+
+
+func _on_Cannon_area_exited(area):
+	colliding = false

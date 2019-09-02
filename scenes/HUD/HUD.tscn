@@ -141,5 +141,6 @@ margin_left = 20.0
 margin_right = 60.0
 margin_bottom = 40.0
 texture_normal = ExtResource( 7 )
+[connection signal="pressed" from="TowerSelection/TowerSelection/GridContainer/Basic/Cannon" to="." method="_on_Cannon_pressed"]
 [connection signal="pressed" from="MarginContainer/UpArrow" to="." method="_on_UpArrow_pressed"]
 [connection signal="pressed" from="MarginContainer/DownArrow" to="." method="_on_DownArrow_pressed"]

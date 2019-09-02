@@ -3,7 +3,7 @@
 [ext_resource path="res://art/mapAssets/towerZone.png" type="Texture" id=1]
 [ext_resource path="res://art/mapAssets/wallZone.png" type="Texture" id=2]
 
-[sub_resource type="TileSet" id=1]
+[sub_resource type="TileSet" id=3]
 0/name = "towerZone.png 0"
 0/texture = ExtResource( 1 )
 0/tex_offset = Vector2( 0, 0 )
@@ -38,5 +38,5 @@
 1/z_index = 0
 
 [node name="TileMap" type="TileMap"]
-tile_set = SubResource( 1 )
+tile_set = SubResource( 3 )
 format = 1

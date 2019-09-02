@@ -1,5 +1,7 @@
 extends Container
 
+var cannon_resource = preload("res://scenes/towers/cannon/Cannon.tscn")
+
 var waves = 3
 var wave_data = {
 	"easy": [["s"], ["s", "m"], ["s", "s", "s"]],
@@ -24,3 +26,9 @@ func _process(delta):
 	$HUD/Resources/VBoxContainer/Mana.text = "Mana: " + str(mana)
 	
 	$HUD/Level/VBoxContainer/Wave.text = "Wave: " + str(current_wave) + "/" + str(waves)
+
+func new_tower(type):
+	match type:
+		"cannon":
+			var cannon = cannon_resource.instance()
+			$Towers.add_child(cannon)

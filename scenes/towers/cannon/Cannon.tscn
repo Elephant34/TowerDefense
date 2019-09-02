@@ -12,7 +12,6 @@ radius = 87.5654
 [node name="Cannon" type="Area2D"]
 collision_mask = 2
 script = ExtResource( 1 )
-bullet_cooldown = 0.7
 
 [node name="Sprite" type="Sprite" parent="."]
 rotation = 1.5708
@@ -29,7 +28,8 @@ shape = SubResource( 2 )
 
 [node name="BulletCooldown" type="Timer" parent="."]
 wait_time = 0.7
-autostart = true
+[connection signal="area_entered" from="." to="." method="_on_Cannon_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_Cannon_area_exited"]
 [connection signal="area_entered" from="range" to="." method="_on_range_area_entered"]
 [connection signal="area_exited" from="range" to="." method="_on_range_area_exited"]
 [connection signal="timeout" from="BulletCooldown" to="." method="_on_BulletCooldown_timeout"]
