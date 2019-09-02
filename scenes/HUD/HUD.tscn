@@ -48,7 +48,6 @@ custom_fonts/font = ExtResource( 2 )
 text = "Mana:"
 
 [node name="Level" type="MarginContainer" parent="."]
-editor/display_folded = true
 anchor_left = 1.0
 anchor_right = 1.0
 margin_left = -247.0
@@ -68,7 +67,7 @@ margin_bottom = 20.0
 custom_fonts/font = ExtResource( 2 )
 text = "Wave:"
 
-[node name="TextureButton" type="TextureButton" parent="Level/VBoxContainer"]
+[node name="NewWave" type="TextureButton" parent="Level/VBoxContainer"]
 margin_top = 35.0
 margin_right = 227.0
 margin_bottom = 74.0
@@ -141,6 +140,7 @@ margin_left = 20.0
 margin_right = 60.0
 margin_bottom = 40.0
 texture_normal = ExtResource( 7 )
+[connection signal="pressed" from="Level/VBoxContainer/NewWave" to="." method="_on_NewWave_pressed"]
 [connection signal="pressed" from="TowerSelection/TowerSelection/GridContainer/Basic/Cannon" to="." method="_on_Cannon_pressed"]
 [connection signal="pressed" from="MarginContainer/UpArrow" to="." method="_on_UpArrow_pressed"]
 [connection signal="pressed" from="MarginContainer/DownArrow" to="." method="_on_DownArrow_pressed"]

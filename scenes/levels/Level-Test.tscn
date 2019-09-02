@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scenes/levels/Level-Test.gd" type="Script" id=1]
 [ext_resource path="res://scenes/mapAssets/GameMap.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/ememies/standered/Standered.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scenes/HUD/HUD.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/HUD/HUD.tscn" type="PackedScene" id=3]
 
 [sub_resource type="Curve2D" id=1]
 _data = {
@@ -28,25 +27,6 @@ polygon = PoolVector2Array( 0.00675631, 333.023, 333.008, 333.005, 332.997, 77.0
 [node name="Enemies" type="Path2D" parent="."]
 curve = SubResource( 1 )
 
-[node name="Standered" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( 120.76, 351.654 )
-rotation = -0.00256169
-offset = 121.02
-
-[node name="Standered4" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( -0.139915, 351.965 )
-rotation = -0.00257335
-
-[node name="Standered2" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( 273.865, 351.26 )
-rotation = -0.00258267
-offset = 274.27
-
-[node name="Standered3" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( 181.155, 351.499 )
-rotation = -0.0025759
-offset = 181.54
-
 [node name="Towers" type="Node2D" parent="."]
 
-[node name="HUD" parent="." instance=ExtResource( 4 )]
+[node name="HUD" parent="." instance=ExtResource( 3 )]

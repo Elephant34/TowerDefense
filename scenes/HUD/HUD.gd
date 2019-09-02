@@ -24,3 +24,7 @@ func _on_Cannon_pressed():
 		$MarginContainer/DownArrow.visible = true
 		
 		get_parent().new_tower("cannon")
+
+
+func _on_NewWave_pressed():
+	get_parent().spawn_wave()

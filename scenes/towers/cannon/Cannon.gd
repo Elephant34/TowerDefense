@@ -8,7 +8,7 @@ var target
 export var bullet_cooldown = 0.7
 
 var spawned
-var colliding = false
+var colliding = []
 
 var bullet_resource = load("res://scenes/towers/cannon/Bullet.tscn")
 
@@ -35,7 +35,7 @@ func _on_range_area_exited(area):
 func _process(delta):
 	
 	if spawned:
-		if Input.is_action_just_pressed("click") and not colliding:
+		if Input.is_action_just_pressed("click") and len(colliding) == 0:
 			spawned = false
 			$BulletCooldown.start()
 		else:
@@ -71,8 +71,9 @@ func _on_BulletCooldown_timeout():
 
 
 func _on_Cannon_area_entered(area):
-	colliding = true
+	if area != self and area.name != "range":
+		colliding.append(area)
 
 
 func _on_Cannon_area_exited(area):
-	colliding = false
+	colliding.erase(area)

@@ -1,6 +1,10 @@
 extends Container
 
+# Tower resouces
 var cannon_resource = preload("res://scenes/towers/cannon/Cannon.tscn")
+
+# Enemy resources
+var standard_resource = preload("res://scenes/ememies/standered/Standered.tscn")
 
 var waves = 3
 var wave_data = {
@@ -32,3 +36,6 @@ func new_tower(type):
 		"cannon":
 			var cannon = cannon_resource.instance()
 			$Towers.add_child(cannon)
+
+func spawn_wave():
+	$Enemies.add_child(standard_resource.instance())
