@@ -15,6 +15,7 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
+damage = 2.5
 
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 1.5, 1.5 )

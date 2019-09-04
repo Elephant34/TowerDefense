@@ -21,7 +21,8 @@ config/icon="res://icon.png"
 
 [autoload]
 
-global="*res://scenes/global.gd"
+consol="*res://scenes/consol.gd"
+globals="*res://scenes/globals.gd"
 
 [display]
 

@@ -2,7 +2,7 @@ extends MarginContainer
 
 
 func _on_Play_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene("res://scenes/mapAssets/WorldMap.tscn")
 
 
 func _on_Credits_pressed():

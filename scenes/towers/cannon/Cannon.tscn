@@ -7,10 +7,11 @@
 radius = 16.6566
 
 [sub_resource type="CircleShape2D" id=2]
-radius = 87.5654
+radius = 102.044
 
 [node name="Cannon" type="Area2D"]
 script = ExtResource( 1 )
+bullet_cooldown = 1.2
 
 [node name="Sprite" type="Sprite" parent="."]
 rotation = 1.5708
