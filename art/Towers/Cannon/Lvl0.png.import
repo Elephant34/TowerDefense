@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Lvl0.png-0cc55133fd8d791cd19b09948ed00dd3.stex"
+path="res://.import/Lvl0.png-101a02b559382e3dfbb738a67e7653a8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Towers/Cannon/Lvl0.png"
-dest_files=[ "res://.import/Lvl0.png-0cc55133fd8d791cd19b09948ed00dd3.stex" ]
+source_file="res://art/towers/cannon/Lvl0.png"
+dest_files=[ "res://.import/Lvl0.png-101a02b559382e3dfbb738a67e7653a8.stex" ]
 
 [params]
 

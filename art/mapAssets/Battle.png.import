@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Bullet.png-90cadc82e107ff3e05a40943c215c357.stex"
+path="res://.import/Battle.png-b5437ea28c1ef9177f43918edf0db3f2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/towers/cannon/Bullet.png"
-dest_files=[ "res://.import/Bullet.png-90cadc82e107ff3e05a40943c215c357.stex" ]
+source_file="res://art/mapAssets/Battle.png"
+dest_files=[ "res://.import/Battle.png-b5437ea28c1ef9177f43918edf0db3f2.stex" ]
 
 [params]
 

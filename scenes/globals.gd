@@ -1,8 +1,8 @@
 extends Node
 
 # Percistet gobal varables of user progress
-var experience
-var current_zone
+var experience = 0
+var current_zone = 0
 var village_respect = {
 	0: 0,
 }
