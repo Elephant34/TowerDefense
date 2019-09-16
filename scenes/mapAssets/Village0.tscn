@@ -15,10 +15,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5, 1, 1.5, 2 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2, 2.301, 2.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0, 10.0, 0.0, -10.0, 0.0 ]
+"values": [ 0.0, 10.0, 0.0, -10.0, 0.0, 3.0, -3.0 ]
 }
 
 [sub_resource type="Animation" id=2]
@@ -32,10 +32,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5, 1, 1.5, 2 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2, 2.301, 2.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0, 10.0, 0.0, -10.0, 0.0 ]
+"values": [ 0.0, 10.0, 0.0, -10.0, 0.0, 3.0, -3.0 ]
 }
 
 [sub_resource type="Animation" id=3]
@@ -49,10 +49,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5, 1, 1.5, 2 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2, 2.301, 2.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0, 10.0, 0.0, -10.0, 0.0 ]
+"values": [ 0.0, 10.0, 0.0, -10.0, 0.0, 3.0, -3.0 ]
 }
 
 [sub_resource type="Animation" id=4]
@@ -66,10 +66,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5, 1, 1.5, 2 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2, 2.301, 2.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0, 10.0, 0.0, -10.0, 0.0 ]
+"values": [ 0.0, 10.0, 0.0, -10.0, 0.0, 3.0, -3.0 ]
 }
 
 [sub_resource type="Animation" id=5]
@@ -83,10 +83,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5, 1, 1.5, 2 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2, 2.301, 2.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0, 10.0, 0.0, -10.0, 0.0 ]
+"values": [ 0.0, 10.0, 0.0, -10.0, 0.0, 3.0, -3.0 ]
 }
 
 [node name="Village0" type="Control"]
@@ -159,7 +159,6 @@ margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="Zone0" type="TextureButton" parent="ZoneMarkers"]
-editor/display_folded = true
 visible = false
 margin_left = 707.682
 margin_top = 188.847
@@ -172,7 +171,6 @@ autoplay = "BattleMark"
 anims/BattleMark = SubResource( 1 )
 
 [node name="Zone1" type="TextureButton" parent="ZoneMarkers"]
-editor/display_folded = true
 visible = false
 margin_left = 155.36
 margin_top = 487.324
@@ -185,7 +183,6 @@ autoplay = "BattleMark"
 anims/BattleMark = SubResource( 2 )
 
 [node name="Zone2" type="TextureButton" parent="ZoneMarkers"]
-editor/display_folded = true
 visible = false
 margin_left = 166.518
 margin_top = 227.9
@@ -198,7 +195,6 @@ autoplay = "BattleMark"
 anims/BattleMark = SubResource( 3 )
 
 [node name="Zone3" type="TextureButton" parent="ZoneMarkers"]
-editor/display_folded = true
 visible = false
 margin_left = 693.735
 margin_top = 283.69
@@ -211,12 +207,11 @@ autoplay = "BattleMark"
 anims/BattleMark = SubResource( 4 )
 
 [node name="Zone4" type="TextureButton" parent="ZoneMarkers"]
-editor/display_folded = true
-visible = false
 margin_left = 696.524
 margin_top = 476.166
 margin_right = 718.524
 margin_bottom = 562.166
+rect_rotation = -1.27437
 texture_normal = ExtResource( 3 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ZoneMarkers/Zone4"]
