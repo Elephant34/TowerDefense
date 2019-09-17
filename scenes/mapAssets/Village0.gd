@@ -34,4 +34,12 @@ func _on_Zone_pressed(extra_arg_0):
 	
 	match extra_arg_0:
 		0:
-			get_tree().change_scene("res://scenes/levels/Level0.tscn")
+			get_tree().change_scene("res://scenes/levels/Village0/Level0.tscn")
+		1:
+			get_tree().change_scene("res://scenes/levels/Village0/Level1.tscn")
+		2:
+			get_tree().change_scene("res://scenes/levels/Village0/Level2.tscn")
+		3:
+			get_tree().change_scene("res://scenes/levels/Village0/Level3.tscn")
+		4:
+			get_tree().change_scene("res://scenes/levels/Village0/Level4.tscn")

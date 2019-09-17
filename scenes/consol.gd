@@ -25,7 +25,7 @@ func _input(event):
 		if event.scancode == sequence[sequence_index]:
 			sequence_index += 1
 			if sequence_index == sequence.size():
-				level = get_tree().get_root().get_children()[1]
+				level = get_tree().get_root().get_children()[2]
 				
 				consol = consol_resource.instance()
 				
