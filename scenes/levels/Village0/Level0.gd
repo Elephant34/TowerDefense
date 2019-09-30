@@ -19,7 +19,7 @@ var wave_data = {
 
 var current_wave = 0
 
-var mode = "easy"
+var mode = globals.difficulty
 
 export var coins = 100
 export var mana = 0

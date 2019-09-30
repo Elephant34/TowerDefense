@@ -12,6 +12,7 @@ var towers_unlocked = [
 	"machine",
 	"cannon",
 ]
+var difficulty = "easy"
 
 var save_raw
 
@@ -41,6 +42,7 @@ func load_save():
 	current_zone = data["current_zone"]
 	village_respect = data["village_respect"]
 	towers_unlocked = data["towers_unlocked"]
+	difficulty = data["difficulty"]
 
 	return
 
@@ -52,7 +54,8 @@ func save_game():
 		"experience": experience,
 		"current_zone": current_zone,
 		"village_respect": village_respect,
-		"towers_unlocked": towers_unlocked
+		"towers_unlocked": towers_unlocked,
+		"difficulty": difficulty,
 	}
 
 	var game_save = File.new()
