@@ -42,6 +42,10 @@ click={
 2d_physics/layer_2="enemies"
 2d_physics/layer_3="bullet"
 
+[logging]
+
+file_logging/enable_file_logging=true
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"

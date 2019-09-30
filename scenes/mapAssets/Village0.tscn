@@ -115,46 +115,45 @@ margin_right = 1.36035
 texture = ExtResource( 2 )
 
 [node name="ResourceButtons" type="Control" parent="."]
-editor/display_folded = true
 margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="0" type="TextureButton" parent="ResourceButtons"]
-margin_left = 267.424
-margin_top = 257.833
-margin_right = 357.424
-margin_bottom = 332.833
+margin_left = 302.881
+margin_top = 267.805
+margin_right = 392.881
+margin_bottom = 342.805
 
 [node name="1" type="TextureButton" parent="ResourceButtons"]
-margin_left = 460.0
-margin_top = 345.0
-margin_right = 533.0
-margin_bottom = 409.0
+margin_left = 497.673
+margin_top = 357.188
+margin_right = 570.673
+margin_bottom = 421.188
 
 [node name="2" type="TextureButton" parent="ResourceButtons"]
-margin_left = 264.0
-margin_top = 419.0
-margin_right = 329.0
-margin_bottom = 474.0
+margin_left = 301.673
+margin_top = 431.188
+margin_right = 366.673
+margin_bottom = 486.188
 
 [node name="SpecialButtons" type="Control" parent="."]
-editor/display_folded = true
 margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="0" type="TextureButton" parent="SpecialButtons"]
-margin_left = 172.0
-margin_top = 252.0
-margin_right = 213.0
-margin_bottom = 297.0
+margin_left = 209.673
+margin_top = 265.296
+margin_right = 250.673
+margin_bottom = 310.296
 
 [node name="1" type="TextureButton" parent="SpecialButtons"]
-margin_left = 580.0
-margin_top = 346.0
-margin_right = 623.0
-margin_bottom = 391.0
+margin_left = 619.889
+margin_top = 359.296
+margin_right = 662.889
+margin_bottom = 404.296
 
 [node name="ZoneMarkers" type="Control" parent="."]
+editor/display_folded = true
 margin_right = 40.0
 margin_bottom = 40.0
 
