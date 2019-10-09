@@ -34,5 +34,5 @@ func _physics_process(delta):
 func _on_Area2D_area_entered(area):
 	# If it has been hit by a bullet loose a life
 	if area.is_in_group("bullet"):
-		if area.my_target == get_node("Area2D"):
-			health -= area.damage
+		#if area.my_target == get_node("Area2D"):
+		health -= area.damage

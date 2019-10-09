@@ -27,6 +27,8 @@ export var civilians = 30
 
 func _ready():
 	wave_data = wave_data[mode]
+	
+	globals.consol_active = true
 
 func _process(delta):
 	$HUD/Resources/VBoxContainer/Civilians.text = "Civilians: " + str(civilians)

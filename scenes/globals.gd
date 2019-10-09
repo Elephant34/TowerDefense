@@ -16,6 +16,8 @@ var difficulty = "easy"
 
 var save_raw
 
+var consol_active = false
+
 
 func _ready():
 	load_save()

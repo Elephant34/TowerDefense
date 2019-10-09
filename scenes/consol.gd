@@ -21,6 +21,9 @@ var sequence = [
 var sequence_index = 0
 
 func _input(event):
+	if not globals.consol_active:
+		return
+	
 	if event is InputEventKey and event.pressed:
 		if event.scancode == sequence[sequence_index]:
 			sequence_index += 1
